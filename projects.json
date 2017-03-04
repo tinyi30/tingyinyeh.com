@@ -1,0 +1,45 @@
+{
+	"data": [
+		{
+			"name": "benefeat",
+			"tags": ["PRODUCT"],
+			"cover": "001"
+		},
+		{
+			"name": "Vynca Registry Service",
+			"tags": ["UI", "UX", "WEB"],
+			"cover": "002"
+		},
+		{
+			"name": "Homey Hostel",
+			"tags": ["UI", "UX", "WEB", "MOBILE", "PRINT"],
+			"cover": "003"
+		},
+		{
+			"name": "benefeat",
+			"tags": ["PRODUCT"],
+			"cover": "004"
+		},
+		{
+			"name": "benefeat",
+			"tags": ["UI", "UX", "WEB"],
+			"cover": "001"
+		},
+		{
+			"name": "benefeat",
+			"tags": ["UI", "UX", "WEB"],
+			"cover": "002"
+		},
+		{
+			"name": "benefeat",
+			"tags": ["UI", "UX", "WEB"],
+			"cover": "001"
+		},
+		{
+			"name": "benefeat",
+			"tags": ["UI", "UX", "WEB"],
+			"cover": "002"
+		}
+	],
+	"imagesPath": "images/"
+}

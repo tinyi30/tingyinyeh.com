@@ -1,0 +1,35 @@
+.project-card {
+	// box-shadow: 0 0 0 1px black;
+	box-sizing: border-box;
+	padding: 2px;
+
+	&__cover {
+		max-width: 100%;
+		// max-width: 387px;
+		width: 100%;
+		height: auto;
+	}
+
+	&__panel {
+		box-sizing: border-box;
+
+		position: absolute;
+		left: 0;
+		bottom: 0;
+
+		max-width: 300px;
+		min-height: 92px;
+
+		padding: 15px 20px;
+
+		width: 100%;
+		background-color: #fff;
+
+		&__line {
+			display: inline-block;
+			width: 28px;
+			height: 0;
+			border-top: 1px solid #22B584;
+		}
+	}
+}

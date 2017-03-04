@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tingyinyeh">
+<head>
+	<meta charset="UTF-8">
+	<title>TingYinYeh Design</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<nav class="nav">
+			    <ul class="nav-links">
+			        <li><a href="about">ABOUT</a></li><li><a href="work">PROJECTS</a></li><li><a href="mailto:tinyi30@gmail.com">CONTACT</a></li>
+			    </ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<div ng-controller="PGridCtrl as homepg">
+				<div class="p-grid p-grid--with-side">
+					<div class="p-grid__main">
+						<div class="project-card-about">
+							Hello! I’m Ivy Yeh, a UI/UX designer who loves to create
+							<span class="special">beautiful, easy-to-use digital products.</span>
+						</div>
+					</div>
+					<div class="p-grid__sub">
+						<div class="p-grid__item" ng-repeat="p in homepg.projectsTop">
+							<div class="project-card">
+								<img class="project-card__cover" ng-srcset="{{homepg.getSrcset(p.cover, homepg.imagesPath)}}" alt="">
+								<div class="project-card__panel">
+									{{::p.name}} <br>
+									<div class="project-card__panel__line"></div> <br>
+									{{::p.tags.join(', ')}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="p-grid">
+					<div class="p-grid__item" ng-repeat="p in homepg.projectsBottom">
+						<div class="project-card">
+							<img class="project-card__cover" ng-srcset="{{homepg.getSrcset(p.cover, homepg.imagesPath)}}" alt="">
+							<div class="project-card__panel">
+								{{::p.name}} <br>
+								<div class="project-card__panel__line"></div> <br>
+								{{::p.tags.join(', ')}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div class="container"></div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.min.js"></script> -->
+	<script src="js/index-dist.js"></script>
+</body>
+</html>

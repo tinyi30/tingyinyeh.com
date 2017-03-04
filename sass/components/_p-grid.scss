@@ -1,0 +1,81 @@
+.p-grid {
+	$prototype-container-width: 1140px;
+	$prototype-item-width: $prototype-container-width / 3;
+	$item-width: percentage($prototype-item-width / $prototype-container-width);
+
+	display: flex;
+	flex-wrap: wrap;
+
+	@media only screen and (max-width: 768px) {
+		flex-direction: column;		
+	}
+
+
+	&__item {
+		position: relative;
+
+		flex: 1 1 $item-width;
+		max-width: $item-width;
+
+		@media only screen and (max-width: 992px) {
+			flex-basis: 50%;
+			max-width: 50%;
+		}
+
+		@media only screen and (max-width: 768px) {
+			flex-basis: 100%;
+			max-width: 100%;
+		}
+	}
+
+	&--with-side {
+		.p-grid__main {
+			position: relative;
+			flex: 0 1 auto;
+			width: calc(#{$item-width} + 0.01px);
+			min-height: 400px;
+
+			.p-grid__item {
+				flex-basis: 100%;
+			}
+
+			@media only screen and (max-width: 992px) {
+				flex-basis: 50%;
+			}
+
+			@media only screen and (max-width: 768px) {
+				width: 100%;
+			}
+		}
+
+		.p-grid__sub {
+			position: relative;
+			flex: 0 2 auto;
+			width: $item-width*2;
+
+			display: flex;
+			flex-wrap: wrap;
+
+			.p-grid__item {
+				max-width: none;
+				flex-basis: 50%;
+
+				@media only screen and (max-width: 992px) {
+					flex-basis: auto;
+				}
+				// @media only screen and (max-width: 768px) {
+				// 	flex-basis: 100%;
+				// 	width: 100%;
+				// }
+			}
+
+			@media only screen and (max-width: 992px) {
+				flex: 0 1 50%;
+			}
+
+			@media only screen and (max-width: 768px) {
+				width: 100%;
+			}
+		}
+	}
+}
